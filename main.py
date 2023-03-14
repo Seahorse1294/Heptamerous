@@ -22,7 +22,7 @@ shapeSize = 300
 hypA = 128
 shortA = 180 - 50.55
 longA = 180 - 104.59
-
+#
 triangles = []
 num_of_triangles = 7
 
