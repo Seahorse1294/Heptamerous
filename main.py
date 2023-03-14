@@ -74,19 +74,21 @@ def finalTriangle():
     sea.forward(30 / perimeter * shapeResize * shapeSize)
     sea.end_fill()
 
+
 def writeName():
     sea.penup()
-    sea.setpos(-130,200)
+    sea.setpos(-130, 200)
     sea.color("black")
-    sea.write("Hello World", font=("freesansbold.ttf",32,"normal"))
+    sea.write("Hello World", font=("freesansbold.ttf", 32, "normal"))
 
-#for i in range(num_of_triangles):
-    #drawBig(long, CAB, medium, BCA, short, ABC, "white", colours[i])
 
-#finalTriangle()
+# for i in range(num_of_triangles):
+# drawBig(long, CAB, medium, BCA, short, ABC, "white", colours[i])
 
-#sea.penup()
-#sea.home()
+# finalTriangle()
+
+# sea.penup()
+# sea.home()
 
 writeName()
 
