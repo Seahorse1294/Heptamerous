@@ -11,7 +11,7 @@ sea = turtle.Turtle()
 sea.color("white", "lightblue")
 sea.shape("turtle")
 sea.width(7)
-sea.speed(25)
+sea.speed(5)
 sea.setposition(-170, 200)
 
 # Method for shapes
@@ -77,18 +77,18 @@ def finalTriangle():
 
 def writeName():
     sea.penup()
-    sea.setpos(-130, 200)
+    sea.setposition(-245, -300)
     sea.color("black")
-    sea.write("Hello World", font=("freesansbold.ttf", 32, "normal"))
+    sea.write("heptamerous", font=("Delvon Thin", int(35 / perimeter * shapeResize * shapeSize), "normal"))
 
 
-# for i in range(num_of_triangles):
-# drawBig(long, CAB, medium, BCA, short, ABC, "white", colours[i])
+for i in range(num_of_triangles):
+    drawBig(long, CAB, medium, BCA, short, ABC, "white", colours[i])
 
-# finalTriangle()
+finalTriangle()
 
-# sea.penup()
-# sea.home()
+sea.penup()
+sea.home()
 
 writeName()
 
