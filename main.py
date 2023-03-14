@@ -1,51 +1,94 @@
 import turtle
 
+shapeResize = 2.5
+
 # Screen definition
 scr = turtle.Screen()
-scr.bgcolor("lightgrey")
+scr.bgcolor("white")
 
 # Turtle Definition
 sea = turtle.Turtle()
 sea.color("white", "lightblue")
 sea.shape("turtle")
-sea.width(6)
+sea.width(7)
+sea.speed(25)
+sea.setposition(-170, 200)
 
 # Method for shapes
-# Length Ratios
-perimeter = 99 + 43 + 79
-hyp = 99 / perimeter
-short = 43 / perimeter
-long = 79 / perimeter
+# Length Ratios, Short length vertex is A, Medium length vertex is B, Long length vertex is C.
+perimeter = 99 + 43 + 79  # 221
+long = 99 / perimeter * shapeResize
+short = 43 / perimeter * shapeResize
+medium = 79 / perimeter * shapeResize
 shapeSize = 300
 
 # Angles
-hypA = 128
-shortA = 180 - 50.55
-longA = 180 - 104.59
+ABC = 129.3  # Side B's angle
+BCA = 75.7  # Side C's angle
+CAB = 155.0  # Side A's angle
 
 triangles = []
 num_of_triangles = 7
 
+colours = ["purple", "blue", "lightblue", "green", "yellow", "orange", "red"]
+
 
 # Draw shapes
-def drawBig(deg1, side1, deg2, side2, deg3, side3, outline, fill):
+def drawBig(side1, deg1, side2, deg2, side3, deg3, outline, fill):
     sea.begin_fill()
     sea.color(outline, fill)
-    sea.left(deg1)
     sea.forward(side1 * shapeSize)
-    sea.left(deg2)
+    sea.right(deg1)
     sea.forward(side2 * shapeSize)
-    sea.left(deg3)
+    sea.right(deg2)
     sea.forward(side3 * shapeSize)
+    sea.right(deg3)
     sea.end_fill()
+    reposition()
 
 
 def reposition():
-    sea.forward(80)
+    sea.penup()
+    sea.right(89.5)
+    sea.forward(53.4 / perimeter * shapeResize * shapeSize)
+    sea.right(90)
+    sea.forward(13 / perimeter * shapeResize * shapeSize)
+    sea.right(ABC)
+    sea.pendown()
 
 
-for i in range(num_of_triangles):
-    drawBig(hypA, hyp, longA, long, shortA, short)
+def finalTriangle():
+    sea.penup()
+    sea.color("white", "purple")
+    sea.setheading(0)
+    sea.right(90)
+    sea.forward(5)
+    sea.left(90)
+    sea.forward(43.5 / perimeter * shapeResize * shapeSize)
+    sea.pendown()
+    sea.begin_fill()
+    sea.forward((99 - 43.5) / perimeter * shapeResize * shapeSize)
+    sea.right(CAB)
+    sea.forward(medium * shapeSize - 32)
+    sea.right(BCA + 53)
+    sea.forward(30 / perimeter * shapeResize * shapeSize)
+    sea.end_fill()
+
+def writeName():
+    sea.penup()
+    sea.setpos(-130,200)
+    sea.color("black")
+    sea.write("Hello World", font=("freesansbold.ttf",32,"normal"))
+
+#for i in range(num_of_triangles):
+    #drawBig(long, CAB, medium, BCA, short, ABC, "white", colours[i])
+
+#finalTriangle()
+
+#sea.penup()
+#sea.home()
+
+writeName()
 
 # Quit
 scr.exitonclick()
