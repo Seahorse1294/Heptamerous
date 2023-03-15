@@ -1,0 +1,56 @@
+This is my pseudo code for CSE3151 Python Logo Project
+
+Firstly I will need to use the turtle python library.
+
+# Screen Definition
+create a new screen and set its background colour to white
+
+#Turtle Definition
+Create a new turtle
+Set its colour, both the line and fill
+Set the shape to turtle
+Set the line width to large for a specific effect
+
+
+#Shape Definition
+Set the shape perimeter, this will be used for ratios.
+Set the long side's ratio - multiply by a resize variable to make bigger/smaller
+Set the medium side's ratio - multiply by a resize variable to make bigger/smaller
+Set the short side's ratio - multiply by a resize variable to make bigger/smaller
+
+
+
+#Angles
+Set the angles of each side.
+If the triangle has vertices A, B, and C, our angles are:
+a = angle BAC or CAB
+b = angle ABC or CBA
+c = angle ACB or BCA
+
+Create an array of seven triangles
+Create an array of each colour
+
+#Draw Shapes
+Draw one big triangle, reposition, repeat.
+The draw function takes in each side (length) and angle (size), with the outline and fill.
+Begin turtle fill (to ensure shape has colour inside)
+Set the colour and fill to the appropriate arguments entered in the function
+Move forward the length of the long side, multiplied by our total shape size
+Turn right the short angle (a)
+Move forward the length of the medium side, multiplied by our total shape size
+Turn right the long angle (c)
+Move foreward the length of the short side, multiplied by our total shape size
+Turn right the medium angle (b)
+End fill to fill the shape
+Reposition turtle (separate function)
+
+#Reposition
+Lift up the pen so the turtle doesn't draw a white line
+Turn right a set amount of degrees
+Move forward a set amount of steps (in a ratio to the shape's perimeter, the shape size, and our resize value)
+Turn right 90 degrees
+Continue forward a set amount of steps (in a ratio to the shape's perimeter, the shape size, and our resize value)
+Turn right the medium angle (b) as this is the same way we face after finishing a shape
+Put the pen back down, ready for the next shape
+
+#Final Triangle Brute Force

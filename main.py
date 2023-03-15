@@ -11,8 +11,8 @@ sea = turtle.Turtle()
 sea.color("white", "lightblue")
 sea.shape("turtle")
 sea.width(7)
-sea.speed(5)
-sea.setposition(-170, 200)
+sea.speed(25)  # Just to make it faster
+sea.setposition(-170, 200)  # To get the logo in the middle
 
 # Method for shapes
 # Length Ratios, Short length vertex is A, Medium length vertex is B, Long length vertex is C.
