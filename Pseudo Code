@@ -1,6 +1,7 @@
 This is my pseudo code for CSE3151 Python Logo Project
 
-Firstly I will need to use the turtle python library.
+Firstly I will need to use the turtle python library:
+Import the turtle library
 
 # Screen Definition
 create a new screen and set its background colour to white
