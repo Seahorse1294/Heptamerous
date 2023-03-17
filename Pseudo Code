@@ -11,14 +11,11 @@ Set its colour, both the line and fill
 Set the shape to turtle
 Set the line width to large for a specific effect
 
-
 #Shape Definition
 Set the shape perimeter, this will be used for ratios.
 Set the long side's ratio - multiply by a resize variable to make bigger/smaller
 Set the medium side's ratio - multiply by a resize variable to make bigger/smaller
 Set the short side's ratio - multiply by a resize variable to make bigger/smaller
-
-
 
 #Angles
 Set the angles of each side.
@@ -39,7 +36,7 @@ Move forward the length of the long side, multiplied by our total shape size
 Turn right the short angle (a)
 Move forward the length of the medium side, multiplied by our total shape size
 Turn right the long angle (c)
-Move foreward the length of the short side, multiplied by our total shape size
+Move forward the length of the short side, multiplied by our total shape size
 Turn right the medium angle (b)
 End fill to fill the shape
 Reposition turtle (separate function)
@@ -54,3 +51,31 @@ Turn right the medium angle (b) as this is the same way we face after finishing 
 Put the pen back down, ready for the next shape
 
 #Final Triangle Brute Force
+Don't draw and reposition to initial coordinates, face east/right
+Move forward to start of triangle
+Start drawing line and fill
+Move forward to end of triangle
+Turn right the short angle (a)
+Move forward the medium length in proportion to the shape size, subtracting a certain amount to line up with the end of the triangle
+Turn right the long angle (c) plus some degrees to align appropriately
+Move forward a shorter amount than the short size
+End filling the triangle.
+
+#Write "Heptamerous"
+Stop drawing
+Set position appropriately on the screen
+Change colour to black
+Write the word underneath the logo
+
+#Calling the function to draw triangles
+For each triangle in triangles call the function with the arguments: long side, short angle, medium side, long angle, short side, medium angle, line-colour white, cycle through colours in order for each triangle.
+
+Call the final triangle
+
+Lift the pen
+Reposition to home
+
+Call the write name function
+
+#Quit
+Exit the screen on a click of the mouse after everything is complete.
